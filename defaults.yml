@@ -31,22 +31,30 @@ xmpp:
     cert: ./server.crt
 
 database:
-  uri: mongodb://localhost/letschat
+  uri: mongodb://mighty:adeola99@ds135305.mlab.com:35305/heroku_x5zcscp3
 
 secrets:
   cookie: secretsauce
 
 files:
-  enable: false
-  provider: local
+  enable: true
+  provider: cloudinary
   maxFileSize: 100000000
   restrictTypes: true
   allowedTypes:
     - 'image/jpeg'
     - 'image/png'
     - 'image/gif'
+    - 'application/pdf'
+    - 'audio/wav'
+    - 'audio/ogg'
+    - 'audio/mp3'
   local:
     dir: uploads
+  cloudinary:
+    cloud_name: 'hktfesgxr'
+    api_key: '466381824545323'
+    api_secret: 'JdFJaT-PzrQIa6gguvq3Nk1KdE8'
 
 auth:
   throttling:
